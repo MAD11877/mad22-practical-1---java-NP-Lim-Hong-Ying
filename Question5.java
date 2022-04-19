@@ -35,7 +35,7 @@ public class Question5
     ArrayList<Integer> intstore = new ArrayList<Integer>();
 
     while (integer != -1) {
-      System.out.print("Enter an integer (-1 to stop): ");
+      //System.out.print("Enter an integer (-1 to stop): ");
       integer = in.nextInt();
       intstore.add(integer);
     }
