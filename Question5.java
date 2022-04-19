@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Question5
@@ -27,6 +30,44 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+
+    int integer = -2;
+    ArrayList<Integer> intstore = new ArrayList<Integer>();
+
+    while (integer != -1) {
+      System.out.print("Enter an integer (-1 to stop): ");
+      integer = in.nextInt();
+      intstore.add(integer);
+    }
+
+    Collections.sort(intstore);
+    int listsize = intstore.size();
+    int mostfreqint = 0;
+    int freqofint = 0;
+    int currentint = 0;
+    int currentfreq = 0;
+
+    for (int i = 0; i < listsize; i++) {
+      if (intstore.get(i) == currentint) {
+        currentfreq++;
+      }
+
+      else if (intstore.get(i) != currentint) {
+        if (currentfreq > freqofint) {
+          freqofint = currentfreq;
+          mostfreqint = currentint;
+
+          currentint = intstore.get(i);
+          currentfreq = 1;
+        }
+
+        else {
+          currentint = intstore.get(i);
+          currentfreq = 1;
+        }
+      }
+    }
+    System.out.println(intstore);
+    System.out.println(mostfreqint);
   }
 }
