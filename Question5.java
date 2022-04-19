@@ -68,6 +68,12 @@ public class Question5
         }
       }
     }
+
+    if (currentfreq > freqofint) {
+      freqofint = currentfreq;
+      mostfreqint = currentint;
+    }
+
     System.out.println(mostfreqint);
   }
 }
