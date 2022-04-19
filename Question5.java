@@ -31,12 +31,13 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
 
-    int integer = -2;
     ArrayList<Integer> intstore = new ArrayList<Integer>();
 
-    while (integer != -1) {
-      //System.out.print("Enter an integer (-1 to stop): ");
-      integer = in.nextInt();
+    int noofentries = 0;
+    noofentries = in.nextInt();
+
+    for (int i = 0; i < noofentries; i++) {
+      int integer = in.nextInt();
       intstore.add(integer);
     }
 
@@ -67,12 +68,6 @@ public class Question5
         }
       }
     }
-
-    if (currentfreq > freqofint) {
-      freqofint = currentfreq;
-      mostfreqint = currentint;
-    }
-
     System.out.println(mostfreqint);
   }
 }
