@@ -73,7 +73,6 @@ public class Question5
       mostfreqint = currentint;
     }
 
-    System.out.println(intstore);
     System.out.println(mostfreqint);
   }
 }
